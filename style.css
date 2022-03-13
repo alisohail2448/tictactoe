@@ -9,7 +9,7 @@
 
 body {
   /* background-color: #56baed; */
-  background-image: linear-gradient( 112.7deg,  rgba(253,185,83,1) 11.4%, rgba(255,138,0,1) 70.2% );
+  background-image: radial-gradient( circle farthest-corner at 7.2% 13.6%,  rgba(37,249,245,1) 0%, rgba(8,70,218,1) 90% );
   min-height: 100vh;
 }
 
@@ -27,7 +27,7 @@ body {
 .select-box {
   background: #fff;
   border-radius: 5px;
-  max-width: 330px;
+  max-width: 400px;
   width: 100%;
   padding: 20px 25px 25px;
   /* display: none; */
@@ -84,6 +84,8 @@ body {
 }
 
 .play-board {
+  max-width: 350px;
+  width: 100%;
   opacity: 0;
   pointer-events: none;
   transform: translate(-50%, -50%) scale(0.9);
@@ -132,16 +134,20 @@ body {
 
 .play-board section {
   display: flex;
+  justify-content: center;
 }
 
 .play-board section span {
-  display: block;
+  /* display: block; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 2px;
-  height: 80px;
-  width: 80px;
+  height: 110px;
+  width: 110px;
   background: #fff;
   border-radius: 5px;
-  font-size: 40px;
+  font-size: 60px;
   text-align: center;
   line-height: 80px;
   color: #56baed;
@@ -175,7 +181,7 @@ body {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
-  max-width: 350px;
+  max-width: 400px;
   width: 100%;
   /* display: none; */
   opacity: 0;
@@ -218,4 +224,10 @@ body {
   color: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 375px) {
+  .result-box {
+    width: 300px;
+  }
 }
